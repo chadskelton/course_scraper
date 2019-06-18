@@ -28,7 +28,7 @@ for department in departments:
 
         url = "https://bweb.kwantlen.ca/pls/prodss/bwysched.p_select_term?wsea_code=ACAD"
         
-        response = br.open(url)
+        response = br.open(url, timeout=20)
         
         # response = br.open(url)
         
