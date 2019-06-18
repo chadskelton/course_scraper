@@ -24,7 +24,7 @@ departments = ['ACCT', 'AGRI', 'ANTH', 'CMNS', 'APSC', 'ARTH', 'ARTS', 'ASIA', '
 
 for department in departments:
     
-    try:
+#    try:
 
         url = "https://bweb.kwantlen.ca/pls/prodss/bwysched.p_select_term?wsea_code=ACAD"
         
@@ -122,8 +122,8 @@ for department in departments:
             except:
                 print 'No course data in this row*'
 
-    except:
-        print "*** Didn't work for Department: " + department + " ***"
+#    except:
+#        print "*** Didn't work for Department: " + department + " ***"
 '''
 
 print tables[1]
