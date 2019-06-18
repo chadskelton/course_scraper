@@ -113,7 +113,7 @@ for department in departments:
                     
                     print record
                     
-                    scraperwiki.sqlite.save(['CRN'], record, table_name="current") # this should overwrite the CRN; if want discrete time entries should do it on uniqueid
+                    scraperwiki.sqlite.save(['CRN'], record, table_name="data") # this should overwrite the CRN; if want discrete time entries should do it on uniqueid
                     scraperwiki.sqlite.save(['uniqueid'], record, table_name="overtime") # this should save, in a separate table, a new entry for every time it searches
                     
                 else:
