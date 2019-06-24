@@ -7,6 +7,7 @@
 
 BeautifulSoup==3.2.0
 beautifulsoup4==4.1.3
-mechanize==0.2.5
+# mechanize==0.2.5
+mechanize==0.4.2
 requests==1.0.4
 lxml==2.3.3
