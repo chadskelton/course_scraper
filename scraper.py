@@ -17,7 +17,10 @@ from BeautifulSoup import BeautifulSoup
 
 br = mechanize.Browser()
 br.set_handle_robots(False)
-br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
+# br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
+br.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36')]
+
+
 
 departments = ['ACCT', 'AGRI', 'ANTH', 'CMNS', 'APSC', 'ARTH', 'ARTS', 'ASIA', 'ASTR', 'BIOL', 'BIOQ', 'HOPS', 'BUSI', 'BUQU', 'CCLS', 'CHEM', 'CHEQ', 'CADA', 'COMM', 'CAHS', 'CBSY', 'CPSC', 'CADD', 'COOP', 'CNPS', 'CRWR', 'CRIM', 'CUST', 'ECON', 'ECHS', 'EDUC', 'ENGL', 'ELST', 'ELSQ', 'ENGQ', 'ENTR', 'ENVI', 'EXCH', 'FASN', 'FMRK', 'FNSR', 'FINA', 'FIND', 'FREN', 'GEOG', 'GNIE', 'GNQU', 'GDMA', 'HCAP', 'HSCI', 'HAUC', 'HIST', 'HORT', 'HRMT', 'INFO', 'IDEA', 'IDSN', 'JAPN', 'JRNL', 'LGLA', 'LING', 'MAND', 'MRKT', 'MATQ', 'MATH', 'MUSI', 'NRSG', 'PHIL', 'PHYS', 'PHYQ', 'POST', 'POLI', 'DEPD', 'PSYN', 'PSYC', 'PRLN', 'PSCM', 'PUNJ', 'SOCI', 'SPAN', 'SETA', 'DETA', 'ZZZZ']
 
