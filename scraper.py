@@ -14,7 +14,14 @@ import urllib2
 import scraperwiki
 from datetime import datetime
 from BeautifulSoup import BeautifulSoup
+
+# trying this fix for 502 Bad Gateway Problem
+
 import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+# end of new fix
 
 br = mechanize.Browser()
 br.set_handle_robots(False)
