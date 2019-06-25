@@ -16,19 +16,6 @@ from datetime import datetime
 from BeautifulSoup import BeautifulSoup
 import ssl
 
-# trying to disable security certificate thing
-
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    # Legacy Python that doesn't verify HTTPS certificates by default
-    pass
-else:
-    # Handle target environment that doesn't support HTTPS verification
-    ssl._create_default_https_context = _create_unverified_https_context
-
-# end of doing that
-
 br = mechanize.Browser()
 br.set_handle_robots(False)
 # br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
