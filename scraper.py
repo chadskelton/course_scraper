@@ -28,7 +28,11 @@ for department in departments:
     
 #    try:
 
-        url = "https://bweb.kwantlen.ca/pls/prodss/bwysched.p_select_term?wsea_code=ACAD"
+        # url = "https://bweb.kwantlen.ca/pls/prodss/bwysched.p_select_term?wsea_code=ACAD"
+        # Invalid security certificate seems to be due to URL switching from kwantlen.ca to kpu.ca
+        # Old kwantlen.ca site is still there but security certificate is invalid because it's tied to kpu.ca
+        
+        url = "https://bweb.kpu.ca/pls/prodss/bwysched.p_select_term?wsea_code=ACAD"
         
         response = br.open(url, timeout=60)
         
