@@ -82,7 +82,7 @@ for department in departments:
         
         html = response.read()
         
-        print html
+        # print html
         
         
         soup = BeautifulSoup(html)
