@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # NEED TO CHANGE TERM CODE FOR IT TO WORK EACH TIME 
+# SHOULD PULL DEPARTMENT CODES FRESH FROM PAGE EACH TIME IN CASE THEY CHANGE
 # SEEMS TO BE DROPPING COURSES FOR REASONS THAT AREN'T CLEAR; HAS MOST JRNL COURSES BUT ONLY ONE COMM COURSE
 # FIXED BY GRABBING ALL ROWS ON THE PAGE INSTEAD OF TABLE FIRST, THEN ROWS. BECAUSE CHECK FOR CHECKBOX BEFORE ADDING TO TABLE, WORKS MORE SIMPLY
 # https://stackoverflow.com/questions/15603561/how-can-i-debug-a-http-post-in-chrome
@@ -22,7 +23,7 @@ br.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple
 
 
 
-departments = ['ACCT', 'AGRI', 'ANTH', 'CMNS', 'APSC', 'ARTH', 'ARTS', 'ASIA', 'ASTR', 'BIOL', 'BIOQ', 'HOPS', 'BUSI', 'BUQU', 'CCLS', 'CHEM', 'CHEQ', 'CADA', 'COMM', 'CAHS', 'CBSY', 'CPSC', 'CADD', 'COOP', 'CNPS', 'CRWR', 'CRIM', 'CUST', 'ECON', 'ECHS', 'EDUC', 'ENGL', 'ELST', 'ELSQ', 'ENGQ', 'ENTR', 'ENVI', 'EXCH', 'FASN', 'FMRK', 'FNSR', 'FINA', 'FIND', 'FREN', 'GEOG', 'GNIE', 'GNQU', 'GDMA', 'HCAP', 'HSCI', 'HAUC', 'HIST', 'HORT', 'HRMT', 'INFO', 'IDEA', 'IDSN', 'JAPN', 'JRNL', 'LGLA', 'LING', 'MAND', 'MRKT', 'MATQ', 'MATH', 'MUSI', 'NRSG', 'PHIL', 'PHYS', 'PHYQ', 'POST', 'POLI', 'DEPD', 'PSYN', 'PSYC', 'PRLN', 'PSCM', 'PUNJ', 'SOCI', 'SPAN', 'SETA', 'DETA', 'ZZZZ']
+departments = ['ACCT', 'ACUP', 'AGRI', 'ANTH', 'CMNS', 'APSC', 'ARTH', 'ARTS', 'ASIA', 'ASTR', 'BIOL', 'BIOQ', 'HOPS', 'BUSI', 'BUSM', 'BUQU', 'CHEM', 'CHEQ', 'CADA', 'CADM', 'COMM', 'CBSY', 'CPSC', 'CADD', 'COOP', 'CNPS', 'CRWR', 'CRIM', 'ECON', 'EDAS', 'EDUC', 'ENGL', 'ELST', 'ELSQ', 'ENGQ', 'ENTR', 'ENVI', 'EXCH', 'FASN', 'FMRK', 'FNSR', 'FINA', 'FIND', 'FREN', 'GEOG', 'GNIE', 'GNQU', 'GDMA', 'GRMT', 'HCAP', 'HSCI', 'HEAL', 'HIST', 'HORT', 'HRMT', 'INDG', 'INFO', 'IDEA', 'IDSN', 'IBUS', 'JAPN', 'JRNL', 'LANC', 'LGLA', 'LING', 'MAND', 'MRKT', 'MATQ', 'MATH', 'MAMT', 'MUSI', 'NRSG', 'OSCM', 'PHIL', 'PHYS', 'PHYQ', 'POST', 'POLI', 'DEPD', 'PSYN', 'PSYC', 'PRLN', 'PUNJ', 'WRTG', 'SOCI', 'SPAN', 'DETA', 'TMAS', 'ZZZZ', 'WELD']
 
 for department in departments:
     
@@ -51,7 +52,7 @@ for department in departments:
         
         br.form.set_all_readonly(False) # allow changing the .value of all controls
         
-        name = ['201920',] # this is actual term code, should change this each term; will be 201530 for Fall 2015; need to change dummy below too
+        name = ['201930',] # this is actual term code, should change this each term; will be 201530 for Fall 2015; need to change dummy below too
         
         for control in br.form.controls:
             if control.name == 'term_code':
