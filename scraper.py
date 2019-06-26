@@ -26,7 +26,7 @@ departments = ['ACCT', 'AGRI', 'ANTH', 'CMNS', 'APSC', 'ARTH', 'ARTS', 'ASIA', '
 
 for department in departments:
     
-#    try:
+    try:
 
         # url = "https://bweb.kwantlen.ca/pls/prodss/bwysched.p_select_term?wsea_code=ACAD"
         # Invalid security certificate seems to be due to URL switching from kwantlen.ca to kpu.ca
@@ -128,8 +128,8 @@ for department in departments:
             except:
                 print 'No course data in this row*'
 
-#    except:
-#        print "*** Didn't work for Department: " + department + " ***"
+    except:
+        print "*** Didn't work for Department: " + department + " ***"
 
 '''
 
