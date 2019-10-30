@@ -12,6 +12,6 @@ mechanize==0.2.5
 # mechanize==0.4.2
 requests==1.0.4
 lxml==2.3.3
-pyOpenSSL==0.13
+pyOpenSSL==17.5.0
 # ndg-httpsclient==0.41
 pyasn1==0.4.5
