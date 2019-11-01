@@ -52,12 +52,12 @@ for department in departments:
         
         br.form.set_all_readonly(False) # allow changing the .value of all controls
         
-        name = ['201930',] # this is actual term code, should change this each term; will be 201530 for Fall 2015; need to change dummy below too
+        name = ['202010',] # this is actual term code, should change this each term; will be 201530 for Fall 2015; need to change dummy below too
         
         for control in br.form.controls:
             if control.name == 'term_code':
                 control.value = name
-                name = '201910' # this is dummy term code, but seems to change (was 201510; not 201530); check POST form fields; doesn't seem to matter
+                name = '201920' # this is dummy term code, but seems to change (was 201510; not 201530); check POST form fields; doesn't seem to matter
         
         response = br.submit()
         
